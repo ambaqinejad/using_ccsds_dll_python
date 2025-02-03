@@ -1,9 +1,12 @@
 import ctypes
 import os
 
+p = r'C:\Users\ambaqinejad\PycharmProjects\using_ccsds_dll'
 dll_path = r'C:\Users\ambaqinejad\PycharmProjects\using_ccsds_dll\libCCSDS.dll'
 
-ccsds = ctypes.CDLL("kernel32.dll")
+os.add_dll_directory(p)
+
+ccsds = ctypes.CDLL("libCCSDS.dll")
 #
 # # Define function return and argument types
 # ccsds.create_packet.restype = ctypes.c_void_p
